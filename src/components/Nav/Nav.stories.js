@@ -30,3 +30,7 @@ export const WithTitle = () => <Nav children="children" title="title" />;
 export const WithTitleDisplayed = () => (
   <Nav children="children" title="title" displayTitle={true} />
 );
+
+export const WithCustomTitleTag = () => (
+  <Nav children="children" title="title" TitleTag={<h3 />} />
+);

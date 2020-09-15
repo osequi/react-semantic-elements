@@ -18,16 +18,16 @@ const propTypes = {
    */
   displayTitle: PropTypes.bool,
   /**
+   * The title heading tag level.
+   * Set to `<h3>` by default
+   * @type {element}
+   */
+  titleHeadingLevel: PropTypes.string,
+  /**
    * The content of the element.
    * @type {any}
    */
   children: PropTypes.any,
-  /**
-   * The title tag.
-   * Set to `<h3>` by default
-   * @type {element}
-   */
-  TitleTag: PropTypes.node,
 };
 
 /**
@@ -36,15 +36,24 @@ const propTypes = {
 const defaultProps = {
   title: null,
   displayTitle: false,
+  titleHeadingLevel: "h3",
   children: null,
-  TitleTag: "<h3>",
+};
+
+const Heading = (props) => {
+  const { hidden, children } = props;
+  return (
+    <header>
+      <h3 hidden={hidden}>{children}</h3>
+    </header>
+  );
 };
 
 /**
  * Displays a `<nav>` component
  */
 const Nav = (props) => {
-  const { title, displayTitle, children, TitleTag } = props;
+  const { title, displayTitle, children, titleHeadingLevel } = props;
 
   /**
    * Displays nothing if there is no `children` prop defined
@@ -54,7 +63,11 @@ const Nav = (props) => {
   /**
    * Displays the title tag if the `title` attribute is set
    */
-  const titleElement = title ? <h3 hidden={!displayTitle}>{title}</h3> : null;
+  const titleElement = title ? (
+    <Heading level={titleHeadingLevel} hidden={!displayTitle}>
+      {title}
+    </Heading>
+  ) : null;
 
   return (
     <nav>
