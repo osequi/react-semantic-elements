@@ -41,12 +41,21 @@ const defaultProps = {
 };
 
 const Heading = (props) => {
-  const { hidden, children } = props;
-  return (
-    <header>
-      <h3 hidden={hidden}>{children}</h3>
-    </header>
-  );
+  const { level, hidden, children } = props;
+
+  /**
+   * Hides the heading when `hidden` is set.
+   * `<h3 hidden>` can't be used because it can be overwritten in css. See https://css-tricks.com/the-hidden-attribute-is-visibly-weak/
+   */
+  const style = hidden ? { display: "none" } : null;
+
+  switch (level) {
+    case "h1":
+      return <h1 style={style}>{children}</h1>;
+    case "h3":
+      return <h3 style={style}>{children}</h3>;
+    default:
+  }
 };
 
 /**
