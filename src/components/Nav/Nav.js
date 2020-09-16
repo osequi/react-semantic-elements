@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+/**
+ * Imports other components and hooks
+ */
 import Headings, { HeadingsPropTypes, HeadingsDefaultProps } from "../Headings";
 
 /**
@@ -8,23 +11,10 @@ import Headings, { HeadingsPropTypes, HeadingsDefaultProps } from "../Headings";
  */
 const propTypes = {
   /**
-   * The element title.
-   * Usually it's not displayed on the UI but in the HTML code helping out the W3C .
-   * @type {string}
+   * The heading of the element.
+   * @type {HeadingsPropTypes}
    */
-  title: PropTypes.string,
-  /**
-   * Display the element title?
-   * Set to false by default
-   * @type {bool}
-   */
-  displayTitle: PropTypes.bool,
-  /**
-   * The title heading tag level.
-   * Set to `<h3>` by default
-   * @type {element}
-   */
-  titleHeadingLevel: PropTypes.string,
+  heading: PropTypes.shape(HeadingsPropTypes),
   /**
    * The content of the element.
    * @type {any}
@@ -36,9 +26,7 @@ const propTypes = {
  * Defines the default props
  */
 const defaultProps = {
-  title: null,
-  displayTitle: false,
-  titleHeadingLevel: "h3",
+  heading: HeadingsDefaultProps,
   children: null,
 };
 
@@ -46,25 +34,16 @@ const defaultProps = {
  * Displays a `<nav>` component
  */
 const Nav = (props) => {
-  const { title, displayTitle, children, titleHeadingLevel } = props;
+  const { heading, children } = props;
 
   /**
    * Displays nothing if there is no `children` prop defined
    */
   if (!children) return null;
 
-  /**
-   * Displays the title tag if the `title` attribute is set
-   */
-  const titleElement = title ? (
-    <Headings level={titleHeadingLevel} display={!displayTitle}>
-      {title}
-    </Headings>
-  ) : null;
-
   return (
     <nav>
-      {titleElement}
+      <Headings {...heading} />
       {children}
     </nav>
   );

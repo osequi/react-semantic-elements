@@ -25,17 +25,14 @@ export const WithChildren = () => (
   <Nav children="Please check the `HTML` tab on the right sidebar for the generated code." />
 );
 
-export const WithTitle = () => <Nav children="children" title="title" />;
+export const WithTitle = () => (
+  <Nav children="children" heading={{ children: "title" }} />
+);
 
-export const WithTitleDisplayed = () => (
-  <Nav children="children" title="title" displayTitle={true} />
+export const WithTitleHidden = () => (
+  <Nav children="children" heading={{ children: "title", display: false }} />
 );
 
 export const WithCustomTitleTag = () => (
-  <Nav
-    children="children"
-    title="title"
-    displayTitle={true}
-    titleHeadingLevel="h1"
-  />
+  <Nav children="children" heading={{ children: "title", level: "h1" }} />
 );
