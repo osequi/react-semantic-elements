@@ -34,8 +34,19 @@ const HeadingsStyled = styled(Headings)((props) => ({
   color: "white",
 }));
 
+const HeadingsStyledAttrs = styled(Headings).attrs((props) => ({
+  style: {
+    background: "red",
+    color: "white",
+  },
+}))`
+  padding: 1em;
+  border: 1px solid;
+`;
+
 const NavStyled = styled(Nav)`
   background: red;
+  color: white;
 `;
 
 /**
@@ -47,7 +58,8 @@ const Demo = (props) => {
   return (
     <Container className="Demo">
       <Headings {...headings}>Demo</Headings>
-      <HeadingsStyled>Demo styled</HeadingsStyled>
+      <HeadingsStyled>Headings styled</HeadingsStyled>
+      <HeadingsStyledAttrs>Headings styled with attrs</HeadingsStyledAttrs>
       <Nav {...nav}>Simple nav</Nav>
       <NavStyled {...nav}>Styled nav</NavStyled>
     </Container>

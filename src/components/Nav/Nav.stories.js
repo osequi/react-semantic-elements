@@ -36,3 +36,7 @@ export const WithTitleHidden = () => (
 export const WithCustomTitleTag = () => (
   <Nav children="children" heading={{ children: "title", level: "h1" }} />
 );
+
+export const Classname = () => (
+  <Nav children="children" className="Classname" />
+);

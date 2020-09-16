@@ -30,3 +30,7 @@ export const Hidden = () => (
 );
 
 export const Level = () => <Headings level="h1" children="children" />;
+
+export const ClassName = () => (
+  <Headings className="Custom" children="children" />
+);
