@@ -29,6 +29,15 @@ const defaultProps = {
  */
 const Container = styled("section")((props) => ({}));
 
+const HeadingsStyled = styled(Headings)((props) => ({
+  background: "red",
+  color: "white",
+}));
+
+const NavStyled = styled(Nav)`
+  background: red;
+`;
+
 /**
  * Displays the component
  */
@@ -38,7 +47,9 @@ const Demo = (props) => {
   return (
     <Container className="Demo">
       <Headings {...headings}>Demo</Headings>
-      <Nav {...nav}>Demo nav</Nav>
+      <HeadingsStyled>Demo styled</HeadingsStyled>
+      <Nav {...nav}>Simple nav</Nav>
+      <NavStyled {...nav}>Styled nav</NavStyled>
     </Container>
   );
 };

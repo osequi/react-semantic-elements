@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
  */
 const propTypes = {
   /**
-   * The level of the element
+   * The level of the element.
    * @type {string}
    */
   level: PropTypes.string,
@@ -16,10 +16,17 @@ const propTypes = {
    */
   display: PropTypes.bool,
   /**
-   * The children of the element
+   * The children of the element.
    * @type {any}
    */
   children: PropTypes.any,
+  /**
+   * The class name of the element.
+   * When the element has `className` set it can be styled by the parent
+   * @see https://styled-components.com/docs/basics#styling-any-component
+   * @type {string}
+   */
+  className: PropTypes.string,
 };
 
 /**
@@ -29,6 +36,7 @@ const defaultProps = {
   level: "h3",
   display: true,
   children: null,
+  className: null,
 };
 
 /**
@@ -38,7 +46,7 @@ const defaultProps = {
  */
 
 const Headings = (props) => {
-  const { level, display, children } = props;
+  const { level, display, children, className } = props;
 
   /**
    * Displays nothing if there is no `children` prop defined
@@ -54,26 +62,55 @@ const Headings = (props) => {
    */
   const style = display ? null : { display: "none" };
 
+  /**
+   * When `className` is not specified it will take the value of `level`
+   */
+  const className2 = className ? className : level;
+
   let heading = "";
 
   switch (level) {
     case "h1":
-      heading = <h1 style={style}>{children}</h1>;
+      heading = (
+        <h1 className={className2} style={style}>
+          {children}
+        </h1>
+      );
       break;
     case "h2":
-      heading = <h2 style={style}>{children}</h2>;
+      heading = (
+        <h2 className={className2} style={style}>
+          {children}
+        </h2>
+      );
       break;
     case "h3":
-      heading = <h3 style={style}>{children}</h3>;
+      heading = (
+        <h3 className={className2} style={style}>
+          {children}
+        </h3>
+      );
       break;
     case "h4":
-      heading = <h4 style={style}>{children}</h4>;
+      heading = (
+        <h4 className={className2} style={style}>
+          {children}
+        </h4>
+      );
       break;
     case "h5":
-      heading = <h5 style={style}>{children}</h5>;
+      heading = (
+        <h5 className={className2} style={style}>
+          {children}
+        </h5>
+      );
     case "h6":
     default:
-      heading = <h6 style={style}>{children}</h6>;
+      heading = (
+        <h6 className={className2} style={style}>
+          {children}
+        </h6>
+      );
   }
 
   return heading;
