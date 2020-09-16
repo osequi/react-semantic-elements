@@ -17,7 +17,7 @@ Default.decorators = [
 ];
 
 export const WithChildren = () => (
-  <Headings children="Please check the `HTML` tab on the right sidebar for the generated code." />
+  <Headings children="Now it displays the children. Please check the `HTML` tab on the right sidebar for the generated code." />
 );
 
 export const Hidden = () => (
@@ -27,8 +27,8 @@ export const Hidden = () => (
   />
 );
 
-export const Level = () => <Headings level="h1" children="children" />;
+export const CustomLevel = () => <Headings level="h1" children="Level is H1" />;
 
-export const ClassName = () => (
-  <Headings className="Custom" children="children" />
+export const CustomClassName = () => (
+  <Headings className="Custom" children="className is `Custom`" />
 );
