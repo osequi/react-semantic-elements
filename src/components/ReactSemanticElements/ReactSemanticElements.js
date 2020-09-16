@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { startCase } from "lodash";
+import { startCase, isNil } from "lodash";
 
 /**
  * Imports other components and hooks
@@ -72,7 +72,7 @@ const defaultProps = {
 const requiredPropsAreSet = (props) => {
   const { children } = props;
 
-  return !(typeof children === "undefined" || children === null);
+  return !isNil(children);
 };
 
 /**
