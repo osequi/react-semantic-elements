@@ -26,17 +26,19 @@ export const WithChildren = () => (
 );
 
 export const WithTitle = () => (
-  <Nav children="children" heading={{ children: "title" }} />
+  <Nav children="children" title="Title" display={true} />
 );
 
-export const WithTitleHidden = () => (
-  <Nav children="children" heading={{ children: "title", display: false }} />
-);
+export const WithTitleHidden = () => <Nav children="children" title="Title" />;
 
 export const WithCustomTitleTag = () => (
   <Nav children="children" heading={{ children: "title", level: "h1" }} />
 );
 
-export const Classname = () => (
+export const WithCustomClassname = () => (
   <Nav children="children" className="Classname" />
+);
+
+export const WithHeading = () => (
+  <Nav children="children" heading={{ children: "title", level: "h1" }} />
 );
