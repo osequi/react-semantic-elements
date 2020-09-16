@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import Headings, { HeadingsPropTypes, HeadingsDefaultProps } from "../Headings";
+
 /**
  * Defines the prop types
  */
@@ -40,24 +42,6 @@ const defaultProps = {
   children: null,
 };
 
-const Heading = (props) => {
-  const { level, hidden, children } = props;
-
-  /**
-   * Hides the heading when `hidden` is set.
-   * `<h3 hidden>` can't be used because it can be overwritten in css. See https://css-tricks.com/the-hidden-attribute-is-visibly-weak/
-   */
-  const style = hidden ? { display: "none" } : null;
-
-  switch (level) {
-    case "h1":
-      return <h1 style={style}>{children}</h1>;
-    case "h3":
-      return <h3 style={style}>{children}</h3>;
-    default:
-  }
-};
-
 /**
  * Displays a `<nav>` component
  */
@@ -73,9 +57,9 @@ const Nav = (props) => {
    * Displays the title tag if the `title` attribute is set
    */
   const titleElement = title ? (
-    <Heading level={titleHeadingLevel} hidden={!displayTitle}>
+    <Headings level={titleHeadingLevel} display={!displayTitle}>
       {title}
-    </Heading>
+    </Headings>
   ) : null;
 
   return (
