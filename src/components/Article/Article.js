@@ -51,7 +51,7 @@ const Article = (props) => {
 
   return (
     <article className={className}>
-      <Headings {...heading2} />
+      {display ? <Headings {...heading2} /> : null}
       {children}
     </article>
   );

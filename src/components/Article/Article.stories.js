@@ -18,3 +18,7 @@ Default.decorators = [
     </div>
   ),
 ];
+
+export const WithChildren = () => (
+  <Article children="Now it displays the children. Please check the `HTML` tab on the right sidebar for the generated code." />
+);

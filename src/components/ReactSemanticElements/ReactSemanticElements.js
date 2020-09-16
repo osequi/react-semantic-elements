@@ -59,7 +59,7 @@ const defaultProps = {
   type: null,
   heading: HeadingsDefaultProps,
   title: null,
-  display: false,
+  display: true,
   children: null,
   className: null,
 };

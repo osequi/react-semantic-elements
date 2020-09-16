@@ -20,23 +20,9 @@ Default.decorators = [
 ];
 
 export const WithChildren = () => (
-  <Nav children="Please check the `HTML` tab on the right sidebar for the generated code." />
+  <Nav children="Now it displays the children. Without title, by default. Please check the `HTML` tab on the right sidebar for the generated code." />
 );
 
 export const WithTitle = () => (
-  <Nav children="children" title="Title" display={true} />
-);
-
-export const WithTitleHidden = () => <Nav children="children" title="Title" />;
-
-export const WithCustomTitleTag = () => (
-  <Nav children="children" heading={{ children: "title", level: "h1" }} />
-);
-
-export const WithCustomClassname = () => (
-  <Nav children="children" className="Classname" />
-);
-
-export const WithHeading = () => (
-  <Nav children="children" heading={{ children: "title", level: "h1" }} />
+  <Nav children="Now it displays also the title" title="Title" display={true} />
 );
