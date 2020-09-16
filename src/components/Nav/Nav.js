@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 import {
   ReactSemanticElementsPropTypes,
   ReactSemanticElementsDefaultProps,
-  checkRequiredProps,
+  requiredPropsAreSet,
   nonEmptyClassname,
 } from "../ReactSemanticElements";
 import Headings from "../Headings";
@@ -37,7 +37,7 @@ const Nav = (props) => {
   /**
    * Displays nothing if the mandatory props are not defined.
    */
-  if (!checkRequiredProps(props)) return null;
+  if (!requiredPropsAreSet(props)) return null;
 
   /**
    * Always displays a className.

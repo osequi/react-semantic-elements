@@ -2,6 +2,6 @@ export {
   default,
   ReactSemanticElementsPropTypes,
   ReactSemanticElementsDefaultProps,
-  checkRequiredProps,
+  requiredPropsAreSet,
   nonEmptyClassname,
 } from "./ReactSemanticElements";

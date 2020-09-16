@@ -1,6 +1,9 @@
 import React from "react";
 
-import { checkRequiredProps, nonEmptyClassname } from "./ReactSemanticElements";
+import {
+  requiredPropsAreSet,
+  nonEmptyClassname,
+} from "./ReactSemanticElements";
 
 it("returns `ClassName` when props are empty", () => {
   const result = nonEmptyClassname({});
@@ -21,16 +24,16 @@ it("returns `class-name` when `className` is defined", () => {
 });
 
 it("returns false when props are empty", () => {
-  const result = checkRequiredProps({});
+  const result = requiredPropsAreSet({});
   expect(result).toBe(false);
 });
 
 it("returns false when children is not defined", () => {
-  const result = checkRequiredProps({ notChildren: "notChildren" });
+  const result = requiredPropsAreSet({ notChildren: "notChildren" });
   expect(result).toBe(false);
 });
 
 it("returns true when children is defined", () => {
-  const result = checkRequiredProps({ children: "children" });
+  const result = requiredPropsAreSet({ children: "children" });
   expect(result).toBe(true);
 });

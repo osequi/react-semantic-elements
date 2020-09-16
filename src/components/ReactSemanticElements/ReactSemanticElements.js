@@ -69,10 +69,10 @@ const defaultProps = {
  * @param  {object} props The props object
  * @return {boolean}      true, when all required props are set
  */
-const checkRequiredProps = (props) => {
+const requiredPropsAreSet = (props) => {
   const { children } = props;
 
-  return children !== undefined;
+  return !(typeof children === "undefined" || children === null);
 };
 
 /**
@@ -105,6 +105,6 @@ export default ReactSemanticElements;
 export {
   propTypes as ReactSemanticElementsPropTypes,
   defaultProps as ReactSemanticElementsDefaultProps,
-  checkRequiredProps,
+  requiredPropsAreSet,
   nonEmptyClassname,
 };
