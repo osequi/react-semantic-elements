@@ -1,7 +1,5 @@
 import React from "react";
-
 import Headings from "./Headings";
-import description from "./Headings.md";
 
 export default {
   title: "Components/Headings",

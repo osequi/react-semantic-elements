@@ -1,8 +1,8 @@
 import React from "react";
-import Article from "./Article";
+import Article from "../Article";
 
 export default {
-  title: "Components/Article",
+  title: "Components/ReactSemanticElements",
   component: Article,
 };
 
