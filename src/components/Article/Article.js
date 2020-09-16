@@ -2,25 +2,62 @@ import React from "react";
 import PropTypes from "prop-types";
 
 /**
+ * Imports other components and hooks
+ */
+import {
+  ReactSemanticElementsPropTypes,
+  ReactSemanticElementsDefaultProps,
+  checkRequiredProps,
+  nonEmptyClassname,
+} from "../ReactSemanticElements";
+import Headings from "../Headings";
+
+/**
  * Defines the prop types
  */
-const propTypes = {};
+const propTypes = {
+  ...ReactSemanticElementsPropTypes,
+};
 
 /**
- * Defines the default props
+ * Defines the default props.
  */
-const defaultProps = {};
+const defaultProps = {
+  ...ReactSemanticElementsDefaultProps,
+  title: "Article",
+};
 
 /**
- * Styles the component container
- */
-const Container = styled("div")((props) => ({}));
-
-/**
- * Displays the component
+ * Displays am `<article>` component.
  */
 const Article = (props) => {
-  return <Container className="Article">Article</Container>;
+  const { heading, title, display, children } = props;
+
+  const type = "article";
+  const props2 = { ...props, type };
+
+  /**
+   * Displays nothing if the mandatory props are not defined.
+   */
+  if (!checkRequiredProps(props2)) return null;
+
+  /**
+   * Always displays a className.
+   * When `className` is not specified it will become `Nav`.
+   */
+  const className = nonEmptyClassname(props2);
+
+  /**
+   * Overwrites the `children` prop of the `heading`.
+   */
+  const heading2 = { ...heading, children: title };
+
+  return (
+    <article className={className}>
+      <Headings {...heading2} />
+      {children}
+    </article>
+  );
 };
 
 Article.propTypes = propTypes;
