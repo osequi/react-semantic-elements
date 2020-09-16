@@ -34,7 +34,18 @@ const HeadingsStyled = styled(Headings)((props) => ({
   color: "white",
 }));
 
+// NOTE: This isn't working
 const HeadingsStyledAttrs = styled(Headings).attrs((props) => ({
+  style: {
+    background: "red",
+    color: "white",
+  },
+}))`
+  padding: 1em;
+  border: 1px solid;
+`;
+
+const H1StyledAttrs = styled("h1").attrs((props) => ({
   style: {
     background: "red",
     color: "white",
@@ -60,6 +71,7 @@ const Demo = (props) => {
       <Headings {...headings}>Demo</Headings>
       <HeadingsStyled>Headings styled</HeadingsStyled>
       <HeadingsStyledAttrs>Headings styled with attrs</HeadingsStyledAttrs>
+      <H1StyledAttrs>H1 styled with attrs</H1StyledAttrs>
       <Nav {...nav}>Simple nav</Nav>
       <NavStyled {...nav}>Styled nav</NavStyled>
     </Container>
