@@ -58,7 +58,7 @@ const Headings = (props) => {
    * `<h3 hidden>` can't be used because it can be overwritten in css.
    * See https://css-tricks.com/the-hidden-attribute-is-visibly-weak/
    *
-   * // NOTE: Check if parent can overwrite this style
+   * In the parent this `display: none` property cannot be overwritten. See Demo.js for example
    */
   const style = display ? null : { display: "none" };
 

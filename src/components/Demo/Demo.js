@@ -34,6 +34,10 @@ const HeadingsStyled = styled(Headings)((props) => ({
   color: "white",
 }));
 
+const HeadingsHidden = styled(Headings)((props) => ({
+  display: "block",
+}));
+
 // NOTE: This isn't working
 const HeadingsStyledAttrs = styled(Headings).attrs((props) => ({
   style: {
@@ -70,6 +74,7 @@ const Demo = (props) => {
     <Container className="Demo">
       <Headings {...headings}>Demo</Headings>
       <HeadingsStyled>Headings styled</HeadingsStyled>
+      <HeadingsHidden display={false}>This shouldn't be visible</HeadingsHidden>
       <HeadingsStyledAttrs>Headings styled with attrs</HeadingsStyledAttrs>
       <H1StyledAttrs>H1 styled with attrs</H1StyledAttrs>
       <Nav {...nav}>Simple nav</Nav>
