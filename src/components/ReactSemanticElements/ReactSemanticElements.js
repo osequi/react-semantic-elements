@@ -70,9 +70,9 @@ const defaultProps = {
  * @return {boolean}      true, when all required props are set
  */
 const checkRequiredProps = (props) => {
-  const { type, children } = props;
+  const { children } = props;
 
-  return children && type;
+  return children !== undefined;
 };
 
 /**

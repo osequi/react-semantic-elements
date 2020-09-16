@@ -33,19 +33,16 @@ const defaultProps = {
 const Article = (props) => {
   const { heading, title, display, children } = props;
 
-  const type = "article";
-  const props2 = { ...props, type };
-
   /**
    * Displays nothing if the mandatory props are not defined.
    */
-  if (!checkRequiredProps(props2)) return null;
+  if (!checkRequiredProps(props)) return null;
 
   /**
    * Always displays a className.
    * When `className` is not specified it will become `Nav`.
    */
-  const className = nonEmptyClassname(props2);
+  const className = nonEmptyClassname({ ...props, type: "article" });
 
   /**
    * Overwrites the `children` prop of the `heading`.
