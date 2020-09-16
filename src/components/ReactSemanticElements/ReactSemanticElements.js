@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { camelCase } from "lodash";
+import { startCase } from "lodash";
 
 /**
  * Imports other components and hooks
@@ -76,14 +76,19 @@ const checkRequiredProps = (props) => {
 };
 
 /**
- * Sets the className to `camelCase(type)` when className is empty
+ * Sets the className to `startCase(type)` when className is empty
  * @param  {object} props The props object
  * @return {string}       The className
  */
 const nonEmptyClassname = (props) => {
   const { className, type } = props;
 
-  return className ? className : camelCase(type);
+  /**
+   * Returns `ClassName` when `className` and `type` is not defined
+   */
+  if (!className && !type) return "ClassName";
+
+  return className ? className : startCase(type);
 };
 
 /**
