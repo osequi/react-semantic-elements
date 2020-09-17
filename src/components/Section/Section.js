@@ -24,13 +24,13 @@ const propTypes = {
  */
 const defaultProps = {
   ...ReactSemanticElementsDefaultProps,
-  title: "Article",
+  title: "Section",
 };
 
 /**
- * Displays an `<article>` component.
+ * Displays a `<section>` component
  */
-const Article = (props) => {
+const Section = (props) => {
   const { heading, title, display, children } = props;
 
   /**
@@ -42,7 +42,7 @@ const Article = (props) => {
    * Always displays a className.
    * When `className` is not specified it will become `Section`.
    */
-  const className = nonEmptyClassname({ ...props, type: "article" });
+  const className = nonEmptyClassname({ ...props, type: "section" });
 
   /**
    * Overwrites the `children` prop of the `heading`.
@@ -50,15 +50,15 @@ const Article = (props) => {
   const heading2 = { ...heading, children: title };
 
   return (
-    <article className={className}>
+    <section className={className}>
       {display ? <Headings {...heading2} /> : null}
       {children}
-    </article>
+    </section>
   );
 };
 
-Article.propTypes = propTypes;
-Article.defaultProps = defaultProps;
+Section.propTypes = propTypes;
+Section.defaultProps = defaultProps;
 
-export default Article;
-export { propTypes as ArticlePropTypes, defaultProps as ArticleDefaultProps };
+export default Section;
+export { propTypes as SectionPropTypes, defaultProps as SectionDefaultProps };
