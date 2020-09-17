@@ -93,6 +93,17 @@ const Demo2 = (props) => {
             the W3C validator for this page.
           </a>
         </p>
+        <p>The SEO score in Google Lighthouse is 100%.</p>
+        <p>
+          <Image src="/assets/images/seo.png" alt="Seo" />
+        </p>
+        <p>
+          The Accessibility score is only 91 due to factors not related to
+          elements. All tests related to elements are passed.
+        </p>
+        <p>
+          <Image src="/assets/images/a11y.png" alt="Accessibility" />
+        </p>
         <Aside>
           <p>Article meta information inside an `aside`</p>
         </Aside>
