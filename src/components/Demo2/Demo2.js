@@ -45,7 +45,12 @@ const Menu = styled(Nav)((props) => ({}));
 /**
  * Styles the pagination
  */
-const Pagination = styled(Nav)((props) => ({
+const Pagination = styled(Nav)((props) => ({}));
+
+/**
+ * Styles the image
+ */
+const Image = styled("img")((props) => ({
   border: "1px solid",
 }));
 
@@ -77,7 +82,7 @@ const Demo2 = (props) => {
       <Article>
         <p>This is how this page is outlined in the W3C Validator.</p>
         <p>
-          <img src="/assets/images/outlined.png" alt="Outlined" />
+          <Image src="/assets/images/outlined.png" alt="Outlined" />
         </p>
         <p>
           You can check it live by yourself at{" "}
