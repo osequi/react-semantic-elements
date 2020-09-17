@@ -29,5 +29,12 @@
     "babel-loader": "^8.1.0",
     "jest": "^26.4.2",
     "react-is": "^16.13.1"
+  },
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/react@1.0.20"
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
   }
 }
