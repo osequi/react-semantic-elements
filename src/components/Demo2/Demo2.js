@@ -62,24 +62,37 @@ const Demo2 = (props) => {
       <Strapline level="h2">
         HTML semantic sectioning elements for React.
       </Strapline>
+      <p>
+        By following the{" "}
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines"
+          title="MDN"
+        >
+          MDN guidelines.
+        </a>
+      </p>
       <Header>
-        <Menu>Menu navigation inside a `nav`</Menu>
+        <Menu title="Menu">Menu navigation inside a `nav`</Menu>
       </Header>
       <Article>
-        <p>
-          This is how this page is outlined in the{" "}
-          <a href="https://validator.w3.org/" title="W3C validator">
-            W3C validator.
-          </a>
-        </p>
+        <p>This is how this page is outlined in the W3C Validator.</p>
         <p>
           <img src="/assets/images/outlined.png" alt="Outlined" />
+        </p>
+        <p>
+          You can check it live by yourself at{" "}
+          <a
+            href="https://validator.w3.org/nu/?showoutline=yes&doc=https%3A%2F%2Freact-semantic-elements.vercel.app%2F"
+            title="W3C validator"
+          >
+            the W3C validator for this page.
+          </a>
         </p>
         <Aside>
           <p>Article meta information inside an `aside`</p>
         </Aside>
       </Article>
-      <Pagination>Pagination inside a `nav`</Pagination>
+      <Pagination title="Pagination">Pagination inside a `nav`</Pagination>
       <Footer>
         <p>Footer</p>
       </Footer>
