@@ -6,10 +6,30 @@ export {
   nonEmptyClassname,
 } from "./ReactSemanticElements";
 
-export { Article, ArticlePropTypes, ArticleDefaultProps } from "../Article";
-export { Aside, AsidePropTypes, AsideDefaultProps } from "../Aside";
-export { Footer, FooterPropTypes, FooterDefaultProps } from "../Footer";
-export { Header, HeaderPropTypes, HeaderDefaultProps } from "../Header";
-export { Headings, HeadingsPropTypes, HeadingsDefaultProps } from "../Headings";
-export { Nav, NavPropTypes, NavDefaultProps } from "../Nav";
-export { Section, SectionPropTypes, SectionDefaultProps } from "../Section";
+export {
+  default as Article,
+  ArticlePropTypes,
+  ArticleDefaultProps,
+} from "../Article";
+export { default as Aside, AsidePropTypes, AsideDefaultProps } from "../Aside";
+export {
+  default as Footer,
+  FooterPropTypes,
+  FooterDefaultProps,
+} from "../Footer";
+export {
+  default as Header,
+  HeaderPropTypes,
+  HeaderDefaultProps,
+} from "../Header";
+export {
+  default as Headings,
+  HeadingsPropTypes,
+  HeadingsDefaultProps,
+} from "../Headings";
+export { default as Nav, NavPropTypes, NavDefaultProps } from "../Nav";
+export {
+  default as Section,
+  SectionPropTypes,
+  SectionDefaultProps,
+} from "../Section";

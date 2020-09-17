@@ -1,10 +1,10 @@
-import Demo from "../src/components/Demo";
+import Demo2 from "../src/components/Demo2";
 import Docs from "../src/components/Docs";
 
 const Home = () => {
   return (
     <>
-      <Demo />
+      <Demo2 />
       <Docs />
     </>
   );
