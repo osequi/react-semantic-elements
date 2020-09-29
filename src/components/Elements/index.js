@@ -19,7 +19,11 @@ export {
 } from "../Header";
 export { Heading, HeadingPropTypes, HeadingDefaultProps } from "../Headings";
 export { default as H1, H1PropTypes, H1DefaultProps } from "../H1";
-
+export { default as H2, H2PropTypes, H2DefaultProps } from "../H2";
+export { default as H3, H3PropTypes, H3DefaultProps } from "../H3";
+export { default as H4, H4PropTypes, H4DefaultProps } from "../H4";
+export { default as H5, H5PropTypes, H5DefaultProps } from "../H5";
+export { default as H6, H6PropTypes, H6DefaultProps } from "../H6";
 /*export { default as Nav, NavPropTypes, NavDefaultProps } from "../Nav";
 export {
   default as Section,

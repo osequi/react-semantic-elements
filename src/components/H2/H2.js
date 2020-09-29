@@ -17,18 +17,18 @@ const propTypes = {
  */
 const defaultProps = {
   ...HeadingsDefaultProps,
-  level: 1,
+  level: 2,
 };
 
 /**
- * Displays a `<h1>` element.
+ * Displays a `<h2>` element.
  */
-const H1 = (props) => {
+const H2 = (props) => {
   return <Headings {...props} />;
 };
 
-H1.propTypes = propTypes;
-H1.defaultProps = defaultProps;
+H2.propTypes = propTypes;
+H2.defaultProps = defaultProps;
 
-export default H1;
-export { propTypes as H1PropTypes, defaultProps as H1DefaultProps };
+export default H2;
+export { propTypes as H2PropTypes, defaultProps as H2DefaultProps };
