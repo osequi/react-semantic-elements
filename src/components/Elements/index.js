@@ -18,6 +18,7 @@ export {
   HeaderDefaultProps,
 } from "../Header";
 export { Heading, HeadingPropTypes, HeadingDefaultProps } from "../Headings";
+export { default as H1, H1PropTypes, H1DefaultProps } from "../H1";
 
 /*export { default as Nav, NavPropTypes, NavDefaultProps } from "../Nav";
 export {

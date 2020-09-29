@@ -6,7 +6,7 @@ import clsx from "clsx";
  * Imports other components and hooks
  */
 import Elements from "../Elements";
-import { Article, Aside, Footer, Header, Heading } from "../Elements";
+import { Article, Aside, Footer, Header, Heading, H1 } from "../Elements";
 
 /**
  * Defines the prop types
@@ -40,7 +40,9 @@ const Demo = (props) => {
         <p>Article body.</p>
         <Aside title="Aside">An aside inside the article.</Aside>
       </Article>
-      <Footer>Footer</Footer>
+      <Footer>
+        <H1>Footer</H1>
+      </Footer>
     </div>
   );
 };
