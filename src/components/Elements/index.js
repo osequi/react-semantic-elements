@@ -6,9 +6,8 @@ export {
   ArticleDefaultProps,
 } from "../Article";
 
-/*
 export { default as Aside, AsidePropTypes, AsideDefaultProps } from "../Aside";
-export {
+/*export {
   default as Footer,
   FooterPropTypes,
   FooterDefaultProps,

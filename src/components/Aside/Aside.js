@@ -18,18 +18,18 @@ const propTypes = {
  */
 const defaultProps = {
   ...ElementsDefaultProps,
-  type: "article",
+  type: "aside",
 };
 
 /**
- * Displays an <article>
+ * Displays the component
  */
-const Article = (props) => {
+const Aside = (props) => {
   return <Elements {...props} />;
 };
 
-Article.propTypes = propTypes;
-Article.defaultProps = defaultProps;
+Aside.propTypes = propTypes;
+Aside.defaultProps = defaultProps;
 
-export default Article;
-export { propTypes as ArticlePropTypes, defaultProps as ArticleDefaultProps };
+export default Aside;
+export { propTypes as AsidePropTypes, defaultProps as AsideDefaultProps };
