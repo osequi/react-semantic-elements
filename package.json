@@ -1,39 +1,34 @@
 {
-  "name": "learn-starter",
+  "name": "react-semantic-elements",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "test": "jest --watch"
-  },
   "dependencies": {
-    "@osequi/new-component": "^0.1.2",
-    "lodash": "^4.17.20",
-    "next": "9.3.5",
-    "prettier": "^2.1.1",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3"
   },
-  "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@storybook/addon-actions": "^6.0.21",
-    "@storybook/addon-essentials": "^6.0.21",
-    "@storybook/addon-links": "^6.0.21",
-    "@storybook/react": "^6.0.21",
-    "@whitespace/storybook-addon-html": "^2.0.1",
-    "babel-loader": "^8.1.0",
-    "jest": "^26.4.2",
-    "react-is": "^16.13.1"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "bit": {
-    "env": {
-      "compiler": "bit.envs/compilers/react@1.0.20"
-    },
-    "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "npm"
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
