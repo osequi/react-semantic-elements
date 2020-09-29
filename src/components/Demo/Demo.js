@@ -5,7 +5,7 @@ import clsx from "clsx";
 /**
  * Imports other components and hooks
  */
-import Elements from "../Elements";
+import SemanticElements from "../SemanticElements";
 import {
   Article,
   Aside,
@@ -20,7 +20,7 @@ import {
   H6,
   Nav,
   Section,
-} from "../Elements";
+} from "../SemanticElements";
 
 /**
  * Defines the prop types
@@ -50,7 +50,7 @@ const Demo = (props) => {
       <Header title="Demo" display={true}>
         <Nav title="Menu navigation">Menu navigation</Nav>
       </Header>
-      <Elements type="article">Article</Elements>
+      <SemanticElements type="article">Article</SemanticElements>
       <Article title="Another article">
         <H1>Heading level 1</H1>
         <Heading level={1}>Heading level 1</Heading>

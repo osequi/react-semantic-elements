@@ -2,20 +2,20 @@ import React from "react";
 /**
  * Imports other components and hooks
  */
-import Elements, { ElementsPropTypes, ElementsDefaultProps } from "../Elements";
+import SemanticElements, { SemanticElementsPropTypes, SemanticElementsDefaultProps } from "../SemanticElements";
 
 /**
  * Defines the prop types
  */
 const propTypes = {
-  ...ElementsPropTypes,
+  ...SemanticElementsPropTypes,
 };
 
 /**
  * Defines the default props
  */
 const defaultProps = {
-  ...ElementsDefaultProps,
+  ...SemanticElementsDefaultProps,
   type: "header",
   display: false,
   // NOTE: to make this work children is set to non-null: `<Header title="Demo" display={true} />`
@@ -26,7 +26,7 @@ const defaultProps = {
  * Displays a `<header>` element.
  */
 const Header = (props) => {
-  return <Elements {...props} />;
+  return <SemanticElements {...props} />;
 };
 
 Header.propTypes = propTypes;

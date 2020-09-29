@@ -1,4 +1,9 @@
-export { default, ElementsPropTypes, ElementsDefaultProps } from "./Elements";
+export {
+  default,
+  SemanticElementsPropTypes,
+  SemanticElementsDefaultProps
+} from "./SemanticElements";
+
 
 export {
   default as Article,

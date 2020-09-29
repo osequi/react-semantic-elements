@@ -2,20 +2,20 @@ import React from "react";
 /**
  * Imports other components and hooks
  */
-import Elements, { ElementsPropTypes, ElementsDefaultProps } from "../Elements";
+import SemanticElements, { SemanticElementsPropTypes, SemanticElementsDefaultProps } from "../SemanticElements";
 
 /**
  * Defines the prop types
  */
 const propTypes = {
-  ...ElementsPropTypes,
+  ...SemanticElementsPropTypes,
 };
 
 /**
  * Defines the default props
  */
 const defaultProps = {
-  ...ElementsDefaultProps,
+  ...SemanticElementsDefaultProps,
   type: "article",
   display: true,
 };
@@ -24,7 +24,7 @@ const defaultProps = {
  * Displays an `<article>` element.
  */
 const Article = (props) => {
-  return <Elements {...props} />;
+  return <SemanticElements {...props} />;
 };
 
 Article.propTypes = propTypes;

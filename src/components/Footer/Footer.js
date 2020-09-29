@@ -2,20 +2,20 @@ import React from "react";
 /**
  * Imports other components and hooks
  */
-import Elements, { ElementsPropTypes, ElementsDefaultProps } from "../Elements";
+import SemanticElements, { SemanticElementsPropTypes, SemanticElementsDefaultProps } from "../SemanticElements";
 
 /**
  * Defines the prop types
  */
 const propTypes = {
-  ...ElementsPropTypes,
+  ...SemanticElementsPropTypes,
 };
 
 /**
  * Defines the default props
  */
 const defaultProps = {
-  ...ElementsDefaultProps,
+  ...SemanticElementsDefaultProps,
   type: "footer",
 };
 
@@ -23,7 +23,7 @@ const defaultProps = {
  * Displays a `<footer>` element.
  */
 const Footer = (props) => {
-  return <Elements {...props} />;
+  return <SemanticElements {...props} />;
 };
 
 Footer.propTypes = propTypes;

@@ -103,7 +103,7 @@ const nonEmptyClassname = (props) => {
  * Displays a semantic element.
  * This is a factory component. It's better to use specific components instead like `<Article>` which has their props properly set up.
  */
-const Elements = (props) => {
+const SemanticElements = props => {
   const { type, heading, title, children, display } = props;
 
   /**
@@ -137,8 +137,11 @@ const Elements = (props) => {
   return createElement(type, props2, children2);
 };
 
-Elements.propTypes = propTypes;
-Elements.defaultProps = defaultProps;
+SemanticElements.propTypes = propTypes;
+SemanticElements.defaultProps = defaultProps;
 
-export default Elements;
-export { propTypes as ElementsPropTypes, defaultProps as ElementsDefaultProps };
+export default SemanticElements;
+export {
+  propTypes as SemanticElementsPropTypes,
+  defaultProps as SemanticElementsDefaultProps
+};

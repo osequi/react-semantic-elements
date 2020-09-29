@@ -40,9 +40,9 @@ const defaultProps = {
 };
 
 /**
- * Displays the `<h1>` ... `<h6>` elements.
+ * Displays the `<h1>` ... `<h6>` SemanticElements.
  * This is a factory component. It's better to use specific components instead like `<H1>` which has their props properly set up.
- * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_SemanticElements
  */
 
 const Headings = (props) => {
