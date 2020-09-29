@@ -67,7 +67,7 @@ const defaultProps = {
   type: null,
   heading: HeadingsDefaultProps,
   title: null,
-  display: true,
+  display: false,
   children: null,
   className: null,
 };
@@ -119,9 +119,9 @@ const Elements = (props) => {
   const className = nonEmptyClassname(props);
 
   /**
-   * Overwrites the `children` prop of the `heading` with the `title` prop.
+   * Overwrites the `heading` props.
    */
-  const heading2 = { ...heading, children: title };
+  const heading2 = { ...heading, children: title, display: display };
 
   /**
    * Prepares props for createElement
@@ -129,7 +129,7 @@ const Elements = (props) => {
   const props2 = { className: className };
   const children2 = (
     <>
-      {display ? <Headings {...heading2} /> : null}
+      {<Headings {...heading2} />}
       {children}
     </>
   );

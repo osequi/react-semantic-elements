@@ -17,6 +17,7 @@ const propTypes = {
 const defaultProps = {
   ...ElementsDefaultProps,
   type: "article",
+  display: true,
 };
 
 /**
