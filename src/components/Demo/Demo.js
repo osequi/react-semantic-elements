@@ -6,7 +6,7 @@ import clsx from "clsx";
  * Imports other components and hooks
  */
 import Elements from "../Elements";
-import { Article, Aside, Footer, Header } from "../Elements";
+import { Article, Aside, Footer, Header, Heading } from "../Elements";
 
 /**
  * Defines the prop types
@@ -36,6 +36,7 @@ const Demo = (props) => {
       <Header title="Demo" display={true} />
       <Elements type="article">Article</Elements>
       <Article title="Another article">
+        <Heading level={4}>Heading level 4</Heading>
         <p>Article body.</p>
         <Aside title="Aside">An aside inside the article.</Aside>
       </Article>

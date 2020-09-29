@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createElement } from "react";
 import PropTypes from "prop-types";
 
 /**
@@ -7,9 +7,9 @@ import PropTypes from "prop-types";
 const propTypes = {
   /**
    * The level of the element.
-   * @type {string}
+   * @type {number}
    */
-  level: PropTypes.string,
+  level: PropTypes.number,
   /**
    * Display the element?
    * @type {bool}
@@ -33,15 +33,15 @@ const propTypes = {
  * Defines the default props
  */
 const defaultProps = {
-  level: "h3",
+  level: 3,
   display: true,
   children: null,
   className: null,
 };
 
 /**
- * Displays the <h1>..<h6> elements
- *
+ * Displays the `<h1>` ... `<h6>` elements.
+ * This is a factory component. It's better to use specific components instead like `<H1>` which has their props properly set up.
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
  */
 
@@ -63,57 +63,25 @@ const Headings = (props) => {
   const style = display ? null : { display: "none" };
 
   /**
-   * When `className` is not specified it will take the value of `level`
+   * Converts level to string.
+   * Like `1` to `h1`
    */
-  const className2 = className ? className : level;
+  const levelAsString = `h${level}`;
 
-  let heading = "";
+  /**
+   * When `className` is not specified it will take the value of `levelAsString`
+   */
+  const className2 = className ? className : levelAsString;
 
-  switch (level) {
-    case "h1":
-      heading = (
-        <h1 className={className2} style={style}>
-          {children}
-        </h1>
-      );
-      break;
-    case "h2":
-      heading = (
-        <h2 className={className2} style={style}>
-          {children}
-        </h2>
-      );
-      break;
-    case "h3":
-      heading = (
-        <h3 className={className2} style={style}>
-          {children}
-        </h3>
-      );
-      break;
-    case "h4":
-      heading = (
-        <h4 className={className2} style={style}>
-          {children}
-        </h4>
-      );
-      break;
-    case "h5":
-      heading = (
-        <h5 className={className2} style={style}>
-          {children}
-        </h5>
-      );
-    case "h6":
-    default:
-      heading = (
-        <h6 className={className2} style={style}>
-          {children}
-        </h6>
-      );
-  }
+  /**
+   * Prepares props for createElement
+   */
+  const props2 = {
+    className: className,
+    style: style,
+  };
 
-  return heading;
+  return createElement(levelAsString, props2, children);
 };
 
 Headings.propTypes = propTypes;
