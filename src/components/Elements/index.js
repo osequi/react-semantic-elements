@@ -24,10 +24,9 @@ export { default as H3, H3PropTypes, H3DefaultProps } from "../H3";
 export { default as H4, H4PropTypes, H4DefaultProps } from "../H4";
 export { default as H5, H5PropTypes, H5DefaultProps } from "../H5";
 export { default as H6, H6PropTypes, H6DefaultProps } from "../H6";
-/*export { default as Nav, NavPropTypes, NavDefaultProps } from "../Nav";
+export { default as Nav, NavPropTypes, NavDefaultProps } from "../Nav";
 export {
   default as Section,
   SectionPropTypes,
   SectionDefaultProps,
 } from "../Section";
-*/

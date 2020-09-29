@@ -18,6 +18,8 @@ import {
   H4,
   H5,
   H6,
+  Nav,
+  Section,
 } from "../Elements";
 
 /**
@@ -44,8 +46,10 @@ const Demo = (props) => {
   const { container } = useStyles(props);
 
   return (
-    <div className={clsx("Demo", container)}>
-      <Header title="Demo" display={true} />
+    <Section title="Demo" className={clsx("Demo", container)}>
+      <Header title="Demo" display={true}>
+        <Nav title="Menu navigation">Menu navigation</Nav>
+      </Header>
       <Elements type="article">Article</Elements>
       <Article title="Another article">
         <H1>Heading level 1</H1>
@@ -58,8 +62,8 @@ const Demo = (props) => {
         <p>Article body.</p>
         <Aside title="Aside">An aside inside the article.</Aside>
       </Article>
-      <Footer>Footer</Footer>
-    </div>
+      <Footer title="Footer">Footer</Footer>
+    </Section>
   );
 };
 

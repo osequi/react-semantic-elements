@@ -16,18 +16,18 @@ const propTypes = {
  */
 const defaultProps = {
   ...ElementsDefaultProps,
-  type: "footer",
+  type: "nav",
 };
 
 /**
- * Displays a `<footer>` element.
+ * Displays a `<nav>` element.
  */
-const Footer = (props) => {
+const Nav = (props) => {
   return <Elements {...props} />;
 };
 
-Footer.propTypes = propTypes;
-Footer.defaultProps = defaultProps;
+Nav.propTypes = propTypes;
+Nav.defaultProps = defaultProps;
 
-export default Footer;
-export { propTypes as FooterPropTypes, defaultProps as FooterDefaultProps };
+export default Nav;
+export { propTypes as NavPropTypes, defaultProps as NavDefaultProps };
