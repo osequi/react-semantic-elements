@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/styles";
 import clsx from "clsx";
 
@@ -7,7 +6,7 @@ import clsx from "clsx";
  * Imports other components and hooks
  */
 import Elements from "../Elements";
-import { Article, Aside, Footer } from "../Elements";
+import { Article, Aside, Footer, Header } from "../Elements";
 
 /**
  * Defines the prop types
@@ -34,7 +33,7 @@ const Demo = (props) => {
 
   return (
     <div className={clsx("Demo", container)}>
-      <h1>Demo</h1>
+      <Header title="Demo" display={true} />
       <Elements type="article">Article</Elements>
       <Article title="Another article">
         <p>Article body.</p>

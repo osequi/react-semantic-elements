@@ -16,19 +16,21 @@ const propTypes = {
  */
 const defaultProps = {
   ...ElementsDefaultProps,
-  type: "footer",
+  type: "header",
   display: false,
+  // NOTE: to make this work children is set to non-null: `<Header title="Demo" display={true} />`
+  children: "",
 };
 
 /**
- * Displays a `<footer>` element.
+ * Displays a `<header>` element.
  */
-const Footer = (props) => {
+const Header = (props) => {
   return <Elements {...props} />;
 };
 
-Footer.propTypes = propTypes;
-Footer.defaultProps = defaultProps;
+Header.propTypes = propTypes;
+Header.defaultProps = defaultProps;
 
-export default Footer;
-export { propTypes as FooterPropTypes, defaultProps as FooterDefaultProps };
+export default Header;
+export { propTypes as HeaderPropTypes, defaultProps as HeaderDefaultProps };

@@ -12,12 +12,12 @@ export {
   FooterPropTypes,
   FooterDefaultProps,
 } from "../Footer";
-/*export {
+export {
   default as Header,
   HeaderPropTypes,
   HeaderDefaultProps,
 } from "../Header";
-export {
+/*export {
   default as Headings,
   HeadingsPropTypes,
   HeadingsDefaultProps,

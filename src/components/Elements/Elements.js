@@ -16,7 +16,15 @@ const propTypes = {
    * Like `nav`, 'article'
    * @type {string}
    */
-  type: PropTypes.oneOf(["nav", "article"]),
+  type: PropTypes.oneOf([
+    "article",
+    "aside",
+    "footer",
+    "header",
+    "heading",
+    "nav",
+    "section",
+  ]),
   /**
    * The heading of the element.
    * Used to insert (a mostly hidden_ heading tag like `<nav><h3>Menu</h3>...</nav>`.
