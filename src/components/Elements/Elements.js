@@ -92,7 +92,8 @@ const nonEmptyClassname = (props) => {
 };
 
 /**
- * Displays a semantic element
+ * Displays a semantic element.
+ * This is a factory component. It's better to use specific components instead like `<Article>` which has their props properly set up.
  */
 const Elements = (props) => {
   const { type, heading, title, children, display } = props;
