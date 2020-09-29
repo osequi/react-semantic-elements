@@ -18,18 +18,19 @@ const propTypes = {
  */
 const defaultProps = {
   ...ElementsDefaultProps,
-  type: "aside",
+  type: "footer",
+  display: "false",
 };
 
 /**
- * Displays an `<article>` element.
+ * Displays a `<footer>` element.
  */
-const Aside = (props) => {
+const Footer = (props) => {
   return <Elements {...props} />;
 };
 
-Aside.propTypes = propTypes;
-Aside.defaultProps = defaultProps;
+Footer.propTypes = propTypes;
+Footer.defaultProps = defaultProps;
 
-export default Aside;
-export { propTypes as AsidePropTypes, defaultProps as AsideDefaultProps };
+export default Footer;
+export { propTypes as FooterPropTypes, defaultProps as FooterDefaultProps };

@@ -22,7 +22,7 @@ const defaultProps = {
 };
 
 /**
- * Displays an <article>
+ * Displays an `<article>` element.
  */
 const Article = (props) => {
   return <Elements {...props} />;

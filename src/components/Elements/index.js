@@ -7,12 +7,12 @@ export {
 } from "../Article";
 
 export { default as Aside, AsidePropTypes, AsideDefaultProps } from "../Aside";
-/*export {
+export {
   default as Footer,
   FooterPropTypes,
   FooterDefaultProps,
 } from "../Footer";
-export {
+/*export {
   default as Header,
   HeaderPropTypes,
   HeaderDefaultProps,
