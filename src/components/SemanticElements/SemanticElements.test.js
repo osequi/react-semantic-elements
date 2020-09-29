@@ -1,8 +1,8 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import SemanticSemanticElements from "./SemanticSemanticElements";
+import SemanticElements from "./SemanticElements";
 
-it("has a SemanticSemanticElements component", () => {
-  const { getByText } = render(<SemanticSemanticElements />);
-  expect(getByText("SemanticSemanticElements")).toBeInTheDocument();
+it("has a SemanticElements component", () => {
+  const { getByText } = render(<SemanticElements />);
+  expect(getByText("SemanticElements")).toBeInTheDocument();
 });

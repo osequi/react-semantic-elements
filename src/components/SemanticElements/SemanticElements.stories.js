@@ -1,12 +1,12 @@
 import React from "react";
-import SemanticSemanticElements from "./SemanticSemanticElements";
+import SemanticElements from "./SemanticElements";
 
 export default {
-  component: SemanticSemanticElements,
-  title: "SemanticSemanticElements"
+  component: SemanticElements,
+  title: "SemanticElements"
 };
 
-const Template = args => <SemanticSemanticElements {...args} />;
+const Template = args => <SemanticElements {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};

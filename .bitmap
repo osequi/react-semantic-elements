@@ -100,39 +100,6 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "osequi.test/elements@0.1.1": {
-        "files": [
-            {
-                "relativePath": "src/components/Elements/Elements.js",
-                "test": false,
-                "name": "Elements.js"
-            },
-            {
-                "relativePath": "src/components/Elements/Elements.md",
-                "test": false,
-                "name": "Elements.md"
-            },
-            {
-                "relativePath": "src/components/Elements/Elements.stories.js",
-                "test": false,
-                "name": "Elements.stories.js"
-            },
-            {
-                "relativePath": "src/components/Elements/Elements.test.js",
-                "test": false,
-                "name": "Elements.test.js"
-            },
-            {
-                "relativePath": "src/components/Elements/index.js",
-                "test": false,
-                "name": "index.js"
-            }
-        ],
-        "mainFile": "src/components/Elements/index.js",
-        "trackDir": "src/components/Elements",
-        "origin": "AUTHORED",
-        "exported": true
-    },
     "osequi.test/footer@0.1.1": {
         "files": [
             {
@@ -490,6 +457,39 @@
         "trackDir": "src/components/Section",
         "origin": "AUTHORED",
         "exported": true
+    },
+    "semantic-elements": {
+        "files": [
+            {
+                "relativePath": "src/components/SemanticElements/SemanticElements.js",
+                "test": false,
+                "name": "SemanticElements.js"
+            },
+            {
+                "relativePath": "src/components/SemanticElements/SemanticElements.md",
+                "test": false,
+                "name": "SemanticElements.md"
+            },
+            {
+                "relativePath": "src/components/SemanticElements/SemanticElements.stories.js",
+                "test": false,
+                "name": "SemanticElements.stories.js"
+            },
+            {
+                "relativePath": "src/components/SemanticElements/SemanticElements.test.js",
+                "test": false,
+                "name": "SemanticElements.test.js"
+            },
+            {
+                "relativePath": "src/components/SemanticElements/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/SemanticElements/index.js",
+        "trackDir": "src/components/SemanticElements",
+        "origin": "AUTHORED",
+        "exported": false
     },
     "version": "14.8.8"
 }
