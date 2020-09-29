@@ -35,5 +35,10 @@
   },
   "devDependencies": {
     "prettier": "^2.1.2"
+  },
+  "bit": {
+    "env": {},
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
   }
 }
