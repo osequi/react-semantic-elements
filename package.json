@@ -11,16 +11,15 @@
     "test": "jest --watch"
   },
   "dependencies": {
+    "@osequi/new-component": "^0.1.2",
     "lodash": "^4.17.20",
     "next": "9.3.5",
     "prettier": "^2.1.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "styled-components": "^5.2.0"
+    "react-dom": "16.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
-    "@metamn/new-component": "0.1.2",
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
