@@ -76,6 +76,7 @@ const defaultProps = {
  * Checks for all required props to be set
  * @param  {object} props The props object
  * @return {boolean}      true, when all required props are set
+ * // NOTE: This can be moved later to logic.js
  */
 const requiredPropsAreSet = (props) => {
   const { children } = props;
